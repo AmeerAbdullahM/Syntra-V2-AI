@@ -21,3 +21,4 @@ Syntra V2 is a multimodal lecture reconstruction, evidence-grounded study, and c
 3. Configure settings
 4. Run migrations: `alembic upgrade head`
 5. Run application: `streamlit run app.py`
+.
