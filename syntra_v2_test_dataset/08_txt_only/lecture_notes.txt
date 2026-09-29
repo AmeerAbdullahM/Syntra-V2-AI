@@ -1,0 +1,7 @@
+Unit: Operating Systems
+Topic: Process Scheduling
+
+A process is a program in execution.
+FCFS schedules processes in arrival order.
+Round Robin assigns each process a fixed time quantum.
+Shorter time quantum generally improves responsiveness but can increase context-switch overhead.

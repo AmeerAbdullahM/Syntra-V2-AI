@@ -1,0 +1,4 @@
+[00:00-00:08] Today we will study a simple data processing pipeline.
+[00:08-00:16] The input data first enters the processing node.
+[00:16-00:25] The processing node validates and transforms the input.
+[00:25-00:34] Finally, the transformed data becomes the output.

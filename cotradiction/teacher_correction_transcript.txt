@@ -1,0 +1,5 @@
+[00:00-00:08] Today we are discussing mass-energy equivalence.
+[00:08-00:16] The slide currently shows E equals m c.
+[00:16-00:25] That is a typo on the slide. Please do not use that formula.
+[00:25-00:35] The correct formula for this example is E equals m c squared.
+[00:35-00:43] So remember: E equals m c squared.

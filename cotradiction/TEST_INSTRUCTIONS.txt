@@ -1,0 +1,29 @@
+SYNTRA V2 CONTRADICTION TEST
+
+Visual source:
+E = mc
+
+Teacher source:
+E = mc^2
+
+The teacher explicitly says the slide is wrong and calls it a typo.
+
+EXPECTED:
+1. Extract visual evidence: E = mc
+2. Extract teacher evidence: E = mc^2
+3. Detect contradiction.
+4. Classify it as EXPLICIT_CORRECTION.
+5. Create a conflict record.
+6. Notify the Den Admin.
+7. Preserve the original slide evidence exactly as E = mc.
+8. Preserve the teacher evidence.
+9. Allow Admin to review and resolve the fused knowledge.
+10. Never silently overwrite the original slide.
+
+Suggested Q&A:
+"What is the correct mass-energy equivalence formula according to this lecture?"
+
+Expected:
+The slide contains E = mc, but the teacher explicitly identifies it as a typo and states that the correct formula is E = mc^2.
+
+The answer should show the relevant visual and teacher evidence.

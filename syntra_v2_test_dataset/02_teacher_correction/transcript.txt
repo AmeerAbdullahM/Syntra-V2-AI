@@ -1,0 +1,4 @@
+[00:00-00:07] Look at the HTTP example on the slide.
+[00:07-00:15] The slide says the port is 80.
+[00:15-00:24] Ignore that value for this lecture; it is a typo.
+[00:24-00:33] For our example, use port 8080.

@@ -1,0 +1,24 @@
+{
+  "den_id": "TEST_DEN_QUEUE",
+  "questions": [
+    {
+      "internal_test_user": "USER_A",
+      "question": "What does the processing node do?"
+    },
+    {
+      "internal_test_user": "USER_B",
+      "question": "What is the output in the pipeline?"
+    },
+    {
+      "internal_test_user": "USER_C",
+      "question": "Does the slide agree with the transcript?"
+    }
+  ],
+  "requirements": [
+    "All jobs enter the queue.",
+    "Jobs retain question_id, den_id and internal requester association.",
+    "Shared UI must not show requester identity.",
+    "Contexts must never cross between users/questions.",
+    "Completed answers become visible to the Den."
+  ]
+}

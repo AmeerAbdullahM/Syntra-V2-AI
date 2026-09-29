@@ -1,0 +1,3 @@
+[00:00-00:10] The diagram on the board shows three nodes.
+[00:10-00:20] The first node is the input, the second is processing, and the third is output.
+[00:20-00:30] Data flows from left to right.

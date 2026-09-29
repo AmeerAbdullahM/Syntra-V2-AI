@@ -1,0 +1,3 @@
+Den scope:
+This Den contains only introductory data-processing material.
+Covered concepts: input, processing node, output, validation, transformation.

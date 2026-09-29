@@ -1,0 +1,12 @@
+ID,Scenario,Input,Expected,Verification
+TC01,Normal multimodal,audio + image + transcript,ALIGNED,Both modalities linked; evidence viewer works
+TC02,Teacher correction,audio + image,EXPLICIT_CORRECTION,Conflict notification + original preserved
+TC03,Visual-only,image,VISUAL SOURCE,No invented teacher speech
+TC04,Blurry/rotated,image,LOW CONFIDENCE,No hallucinated text
+TC05,Ambiguous handwriting,image,LOW/UNKNOWN,Uncertainty surfaced
+TC06,Missing audio,image,INSUFFICIENT FOR SPEECH,State audio unavailable
+TC07,Missing visual,audio + transcript,AUDIO SOURCE,State visual unavailable
+TC08,TXT only,txt,DEN MATERIAL,Text evidence traceability
+TC09,General knowledge,txt + out-of-scope question,GENERAL KNOWLEDGE,Explicit source badge
+TC10,Queue isolation,3 Q&A jobs,QUEUED/PROCESSING/COMPLETED,"No context mixing, no identity in shared feed"
+TC11,Security,unsupported/empty/unicode/unauthorized,REJECT/DENY/HANDLE,No unsafe file handling
