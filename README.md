@@ -642,9 +642,7 @@ APIs, workflows and UI components may continue to evolve.
 
 ## License
 
-A license has not been specified in the repository at the time of writing.
-
-If this project is intended for public open-source distribution, add a license file such as MIT, Apache-2.0 or another license appropriate to the project.
+This project is licensed under the **MIT License**.
 
 ---
 
