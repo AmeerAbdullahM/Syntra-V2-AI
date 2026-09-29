@@ -1,5 +1,6 @@
 import streamlit as st
 from backend.schemas.auth import UserResponse
+# pyrefly: ignore [missing-import]
 from streamlit_cookies_controller import CookieController
 from backend.database.connection import SessionLocal
 from backend.database.repositories.user_repo import UserRepository
