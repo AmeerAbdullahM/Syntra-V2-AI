@@ -70,9 +70,19 @@ def render_materials_section(rock_id: str, is_admin: bool, db):
                 # Only show the delete button if the user is an admin
                 if is_admin:
                     if st.button("Delete", key=f"del_mat_{m.id}", help="Delete Material"):
-                        db.delete(m)
-                        db.commit()
+                        # Import the actual database model
+                        from backend.models.material import Material
+                        
+                        # Find the real database object using the ID
+                        real_material = db.query(Material).filter(Material.id == m.id).first()
+                        
+                        # Delete it
+                        if real_material:
+                            db.delete(real_material)
+                            db.commit()
+                            
                         st.rerun()
+
 
     if is_admin:
         st.markdown("<div style='margin-top: 1rem;'></div>", unsafe_allow_html=True)
