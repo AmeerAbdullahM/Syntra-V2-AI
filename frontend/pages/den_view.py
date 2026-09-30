@@ -47,12 +47,14 @@ def render_materials_section(rock_id: str, is_admin: bool, db):
         """, unsafe_allow_html=True)
     else:
         for m in materials:
-            col_m1, col_m2 = st.columns([3, 2])
+            # We changed this to 3 columns to make room for the Delete button!
+            col_m1, col_m2, col_m3 = st.columns([3, 2, 1])
+            
             with col_m1:
-                # Use standard button, style via CSS if needed
                 if st.button(f"{m.original_filename}", key=f"mat_btn_{m.id}", use_container_width=True):
                     st.session_state.view_material_id = m.id
                     st.switch_page("pages/view_material.py")
+                    
             with col_m2:
                 status_col = get_status_color(m.processing_status)
                 st.markdown(f"""
@@ -63,6 +65,14 @@ def render_materials_section(rock_id: str, is_admin: bool, db):
                         </span>
                     </div>
                 """, unsafe_allow_html=True)
+                
+            with col_m3:
+                # Only show the delete button if the user is an admin
+                if is_admin:
+                    if st.button("Delete", key=f"del_mat_{m.id}", help="Delete Material"):
+                        db.delete(m)
+                        db.commit()
+                        st.rerun()
 
     if is_admin:
         st.markdown("<div style='margin-top: 1rem;'></div>", unsafe_allow_html=True)
@@ -88,6 +98,7 @@ def render_materials_section(rock_id: str, is_admin: bool, db):
                             except Exception as e:
                                 st.error(f"Error uploading {uploaded_file.name}: {str(e)}")
                     st.rerun()
+
 
 with SessionLocal() as db:
     den_service = DenService(db)
