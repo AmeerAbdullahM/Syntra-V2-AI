@@ -12,7 +12,8 @@
 
 <p>
   <a href="https://github.com/AmeerAbdullahM/Syntra-V2-AI">Repository</a> ·
-  <a href="https://github.com/AmeerAbdullahM/Syntra-V2-AI/issues">Issues</a>
+  <a href="https://github.com/AmeerAbdullahM/Syntra-V2-AI/issues">Issues</a> .
+  <a href="https://syntra-v2-ai.onrender.com/">Website</a>
 </p>
 
 </div>
